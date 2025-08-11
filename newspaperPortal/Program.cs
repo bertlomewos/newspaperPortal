@@ -26,7 +26,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend", policy =>
     {
         // Allow your frontend address
-        policy.WithOrigins("http://127.0.0.1:5500", "http://localhost:54770", "https://bertlomewos.github.io/newsletterFrontend/")
+        policy.WithOrigins("http://127.0.0.1:5500", "http://localhost:54770", "https://bertlomewos.github.io")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
