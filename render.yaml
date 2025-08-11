@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-newspaper-api
+    env: dotnet
+    buildCommand: dotnet publish newspaperPortal/newspaperPortal.csproj -c Release -o out
+    startCommand: dotnet out/newspaperPortal.dll
+    envVars:
+      - key: DOTNET_RUNNING_IN_CONTAINER
+        value: true
